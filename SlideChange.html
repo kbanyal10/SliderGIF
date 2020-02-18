@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="slide">
+    <p>Inc</p>
+    <div class="slidecontainer">
+        <input type="range" min="1" max="3" value="2" class="slider" id="myRange">
+      </div>
+      <p>Dec</p>
+    </div>
+    <video width="320" height="240" controls>
+        <source src='Mod03_15_Part2.mov'>
+    
+      </video>
+    
+</body>
+<script>
+    var slider = document.getElementById("myRange");
+    slider.addEventListener('change', function(){
+        console.log((this).value);
+
+        if(this.value == 1){
+
+      document.getElementsByTagName("video")[0].setAttribute("src", "Mod03_15_Part1.mov");
+
+        }
+
+        if(this.value == 2){
+
+            document.getElementsByTagName("video")[0].setAttribute("src", "Mod03_15_Part2.mov");
+
+        }
+
+        if(this.value == 3){
+
+document.getElementsByTagName("video")[0].setAttribute("src", "Mod03_15_Part3.mov");
+
+}
+    })
+
+
+
+</script>
+</html>
